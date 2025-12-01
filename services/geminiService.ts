@@ -8,8 +8,9 @@ export async function generateGemini(prompt: string) {
     });
   
     if (!response.ok) {
-      throw new Error("API Error");
+      const errText = await response.text();
+      throw new Error("AI API Error: " + errText);
     }
   
-    return response.json();
+    return response.json();  // Cloudflare Worker의 JSON 반환값
   }
