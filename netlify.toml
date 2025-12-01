@@ -1,0 +1,7 @@
+[build]
+  publish = ""      # ❗ Netlify는 프론트 빌드 안 함
+  command = ""      # ❗ 빌드 명령 없음 (프론트 빌드 방지)
+  base = "Demo/autorestaurant-ai-advisor_v1"
+
+[functions]
+  directory = "Demo/autorestaurant-ai-advisor_v1/netlify/functions"
